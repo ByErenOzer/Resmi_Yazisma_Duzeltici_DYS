@@ -1,0 +1,221 @@
+{
+  "version": "2.1.0",
+  "description": "Resmi yazışmalarda kullanılacak kelime eşleştirmeleri. NOT: Şahsileştirme kontrolü artık sadece LLM ile yapılmaktadır.",
+
+  "wrong_to_correct": {
+    "description": "Sık yanlış kullanılan kelimeler ve doğru yazımları",
+    "mappings": {
+      "milletler arası": "milletlerarası",
+      "devletler arası": "devletlerarası",
+      "kurumlar arası": "kurumlararası",
+      "kişiler arası": "kişilerarası",
+
+      "muhtapp": "muhatap",
+      "muhatab": "muhatap",
+      "muhadap": "muhatap",
+
+      "proğram": "program",
+      "progam": "program",
+
+      "tahüt": "taahhüt",
+      "taahüt": "taahhüt",
+      "tahahhüt": "taahhüt",
+
+      "tesbit": "tespit",
+      "tesbid": "tespit",
+
+      "tebli": "tebliğ",
+      "teblii": "tebliğ",
+
+      "unvan": "ünvan",
+
+      "yurtiçi": "yurt içi",
+      "yurtici": "yurt içi",
+
+      "yurtdışı": "yurt dışı",
+      "yurtdisi": "yurt dışı",
+
+      "aksesuvar": "aksesuar",
+
+      "anteseptik": "antiseptik",
+
+      "aşağıdaki gibi": "aşağıdaki şekilde",
+
+      "birbuçuk": "bir buçuk",
+      "ikibuçuk": "iki buçuk",
+
+      "birebir": "bire bir",
+
+      "birey sel": "bireysel",
+
+      "dakka": "dakika",
+
+      "defalarce": "defalarca",
+
+      "dersane": "dershane",
+
+      "diksyon": "diksiyon",
+
+      "doğalgaz": "doğal gaz",
+
+      "eşşek": "eşek",
+
+      "herkez": "herkes",
+
+      "herzaman": "her zaman",
+      "herzman": "her zaman",
+
+      "hiçbirzaman": "hiçbir zaman",
+      "hicbirzaman": "hiçbir zaman",
+
+      "hiç birşey": "hiçbir şey",
+      "hicbirsey": "hiçbir şey",
+
+      "hickimse": "hiç kimse",
+
+      "yalnış": "yanlış",
+      "yalniz": "yalnız",
+
+      "yardimsever": "yardımsever",
+
+      "yetmis": "yetmiş",
+
+      "yirmidört": "yirmi dört",
+      "yirmidort": "yirmi dört",
+
+      "müdir": "müdür",
+
+      "müracat": "müracaat",
+
+      "mübadile": "mübadele",
+
+      "mütefik": "müttefik",
+
+      "şifai": "şifahi",
+
+      "teşekür": "teşekkür",
+      "tesekkür": "teşekkür",
+      "teşekkurler": "teşekkürler",
+
+      "yapilmaktadir": "yapılmaktadır",
+
+      "edilmektadir": "edilmektedir",
+
+      "bulunmaktadir": "bulunmaktadır",
+
+      "saglanmaktadir": "sağlanmaktadır",
+
+      "acenta": "acente",
+      "alt yapı": "altyapı",
+      "ardarda": "art arda",
+      "askari": "asgari",
+      "asvalt": "asfalt",
+      "ahçı": "aşçı",
+      "aşcı": "aşçı",
+      "ayrıyeten": "ayrıca",
+      "ayrıyetten": "ayrıca",
+      "azerbeycan": "azerbaycan",
+      "baş hekim": "başhekim",
+      "bir biri": "birbiri",
+      "bir çok": "birçok",
+      "bir kaç": "birkaç",
+      "birşey": "bir şey",
+      "bir takım": "birtakım",
+      "bu gün": "bugün",
+      "burda": "burada",
+      "deyinmek": "değinmek",
+      "derc etmek": "dercetmek",
+      "diyaspora": "diaspora",
+      "direk": "direkt",
+      "ditek": "direkt",
+      "döküman": "doküman",
+      "döndermek": "döndürmek",
+      "entellektüel": "entelektüel",
+      "erezyon": "erozyon",
+      "evraklar": "evrak",
+      "fesih etmek": "feshetmek",
+      "fesh etmek": "feshetmek",
+      "göz altı": "gözaltı",
+      "gece kondu": "gecekondu",
+      "harfiyat": "hafriyat",
+      "hastahane": "hastane",
+      "herbiri": "her biri",
+      "her hangi": "herhangi",
+      "herşey": "her şey",
+      "hizmetiçi": "hizmet içi",
+      "huküğu": "hukuku",
+      "insiyatif": "inisiyatif",
+      "işbirliği": "iş birliği",
+      "itibariyle": "itibarıyla",
+      "izalasyon": "izolasyon",
+      "kayıt etmek": "kaydetmek",
+      "klavuz": "kılavuz",
+      "kırahathane": "kıraathane",
+      "krathane": "kıraathane",
+      "kominikasyon": "komünikasyon",
+      "komünükasyon": "komünikasyon",
+      "küsür": "küsur",
+      "küsurat": "küsurat",
+      "labaratuar": "laboratuvar",
+      "labarutuar": "laboratuvar",
+      "labaratuvar": "laboratuvar",
+      "lağv etmek": "lağvetmek",
+      "mataryel": "materyal",
+      "mebla": "meblağ",
+      "metod": "metot",
+      "method": "metot",
+      "methot": "metot",
+      "mevzuatlar": "mevzuat",
+      "mezkür": "mezkûr",
+      "meskür": "mezkûr",
+      "mütaakip": "müteakip",
+      "muhtatap": "muhatap",
+      "mütevazi": "mütevazı",
+      "mühled": "mühlet",
+      "mühid": "mühit",
+      "mütahit": "müteahhit",
+      "nüfüs": "nüfus",
+      "olağan üstü": "olağanüstü",
+      "orjinal": "orijinal",
+      "ortadoğu": "orta doğu",
+      "parağraf": "paragraf",
+      "parakende": "perakende",
+      "personeller": "personel",
+      "provakasyon": "provokasyon",
+      "rakkam": "rakam",
+      "satınalma": "satın alma",
+      "sebeb": "sebep",
+      "sevketmek": "sevk etmek",
+      "seyehat": "seyahat",
+      "sezeryan": "sezaryen",
+      "su cüstü": "sucüstü",
+      "sözkonusu": "söz konusu",
+      "sipiker": "spiker",
+      "şöför": "şoför",
+      "soför": "şoför",
+      "uslup": "üslup",
+      "taktır": "takdir",
+      "tasviye": "tasfiye",
+      "tastik": "tasdik",
+      "tekrardan": "tekrar",
+      "tensib": "tensip",
+      "teşfik": "teşvik",
+      "taşaron": "taşeron",
+      "ültümaton": "ültimatom",
+      "ultimatom": "ültimatom",
+      "ünüverstite": "üniversite",
+      "ünverstite": "üniversite",
+      "ünversite": "üniversite",
+      "üzre": "üzere",
+      "ve ya": "veya",
+      "yada": "ya da",
+      "yanlıç": "yanlış",
+      "yanliz": "yalnız",
+      "yasadışı": "yasa dışı",
+      "yeralmak": "yer almak",
+      "yövmiye": "yevmiye",
+      "yükseköğrenim": "yükseköğretim",
+      "yüksek öğretim": "yükseköğretim"
+    }
+  }
+}

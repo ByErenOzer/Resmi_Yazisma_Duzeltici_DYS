@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "description": "Resmî yazışmalarda (DYS) hiyerarşi ilişkisine göre metin sonu arz/rica ibaresi belirleme kuralları",
+  "hierarchy_levels": {
+    "description": "Hiyerarşi seviyeleri (düşük sayı = yüksek yetki)",
+    "levels": {
+      "cumhurbaşkanlığı": 1,
+      "cumhurbaşkanlığına": 1,
+      "cumhurbaşkanı": 1,
+      "tbmm": 2,
+      "tbmm başkanlığı": 2,
+      "tbmm başkanlığına": 2,
+      "başbakanlık": 2,
+      "bakanlık": 3,
+      "bakanlığına": 3,
+      "bakanlığı": 3,
+      "bakan": 3,
+      "bakan yardımcılığı": 4,
+      "bakan yardımcısı": 4,
+      "bakan yardımcılığına": 4,
+      "müsteşarlık": 4,
+      "müsteşar": 4,
+      "müsteşarlığına": 4,
+      "genel müdürlük": 5,
+      "genel müdürlüğü": 5,
+      "genel müdürlüğüne": 5,
+      "genel müdür": 5,
+      "başkanlık": 5,
+      "başkan": 5,
+      "başkanlığına": 5,
+      "genel müdür yardımcılığı": 6,
+      "genel müdür yardımcısı": 6,
+      "başkan yardımcısı": 6,
+      "başkan yardımcılığı": 6,
+      "daire başkanlığı": 7,
+      "daire başkanlığına": 7,
+      "daire başkan": 7,
+      "daire başkan v": 7,
+      "daire başkanı v": 7,
+      "daire başkanlıkları": 7,
+      "daire başkanlıklarına": 7,
+      "daire başkanı": 7,
+      "koordinatörlük": 8,
+      "koordinatörlüğü": 8,
+      "koordinatörlüğüne": 8,
+      "koordinatör": 8,
+      "hukuk müşavirliği": 7,
+      "hukuk müşaviri": 7,
+      "şube müdürlüğü": 8,
+      "şube müdürlüğüne": 8,
+      "şube müdürü": 8,
+      "müdürlük": 8,
+      "müdürlüğü": 8,
+      "müdürlüğüne": 8,
+      "müdür": 8,
+      "il müdürlüğü": 8,
+      "il müdürlüğüne": 8,
+      "il müdürü": 8,
+      "başhekimlik": 8,
+      "başhekimliğine": 8,
+      "başhekim": 8,
+      "birim sorumluluğu": 9,
+      "birim sorumlusu": 9,
+      "ilçe müdürlüğü": 9,
+      "ilçe müdürlüğüne": 9,
+      "ilçe müdürü": 9,
+      "şef": 9,
+      "şeflik": 9,
+      "uzman": 10,
+      "memur": 10
+    }
+  },
+  "closing_rules": {
+    "description": "Yönetmelik esaslarına göre kapanış ibaresi kuralları",
+    "rules": {
+      "sender_higher": {
+        "description": "Gönderen üst makam, alıcı alt makam (üstten alta)",
+        "expected_closing": "rica ederim.",
+        "alternative_closings": ["Rica ederim"]
+      },
+      "sender_lower": {
+        "description": "Gönderen alt makam, alıcı üst makam (alttan üste)",
+        "expected_closing": "arz ederim.",
+        "alternative_closings": ["Arz ederim"]
+      },
+      "sender_equal": {
+        "description": "İdare içinde aynı düzey birimler arası yazışmalar (eşit düzey)",
+        "expected_closing": "arz ederim.",
+        "alternative_closings": ["Arz ederim"]
+      },
+      "mixed": {
+        "description": "Üst + aynı + alt makamlara birlikte dağıtımlı yazışmalar",
+        "expected_closing": "arz ve rica ederim.",
+        "alternative_closings": ["Arz ve rica ederim", "Arz/rica ederim.", "Arz/rica ederim"]
+      },
+      "external_non_public": {
+        "description": "Kamu niteliği olmayan tüzel kişilere (şirket, vakıf, dernek vb.)",
+        "expected_closing": "rica ederim.",
+        "alternative_closings": ["Rica ederim"]
+      },
+      "unknown": {
+        "description": "Ast-üst ilişkisinin net tanımlanmadığı belirsiz durumlar",
+        "expected_closing": "arz ederim.",
+        "alternative_closings": ["Arz ederim"]
+      }
+    }
+  },
+  "delegation_rules": {
+    "description": "Yetki devri (a.) durumunda arz/rica kararında esas alınacak işaretler",
+    "notes": [
+      "Belge, imza yetkisini devreden makam adına 'a.' imzalandığında karar yetkiyi devreden makamın hiyerarşik konumuna göre verilmelidir."
+    ],
+    "delegation_indicators": ["a.", "a./", "adına", "yerine", "vekili", "v."]
+  },
+  "distribution_rules": {
+    "description": "Dağıtımlı yazılarda karma alıcı tespiti",
+    "notes": [
+      "Üst, aynı düzey ve alt makamlara birlikte dağıtımlı yazışmalar: 'Arz ve rica ederim.' veya 'Arz/rica ederim.'"
+    ],
+    "mixed_distribution_threshold": 2
+  },
+  "external_entity_keywords": {
+    "description": "Kamu niteliği olmayan tüzel kişi tespit anahtar kelimeleri",
+    "non_public_entity_keywords": [
+      "a.ş",
+      "a.s",
+      "anonim şirket",
+      "anonim şirketi",
+      "ltd",
+      "ltd.",
+      "limited",
+      "limited şirket",
+      "limited şirketi",
+      "sanayi ve ticaret",
+      "ticaret a.ş",
+      "vakfı",
+      "vakfına",
+      "derneği",
+      "derneğine",
+      "kooperatifi",
+      "kooperatifine",
+      "şirket",
+      "şirketi",
+      "şirketine",
+      "holding",
+      "holdinge",
+      "grup",
+      "grubuna",
+      "özel",
+      "özel hastane",
+      "özel okul",
+      "sendika",
+      "sendikası",
+      "sendikasına",
+      "oda",
+      "odasına",
+      "birliği",
+      "birliğine",
+      "federasyon",
+      "federasyonu",
+      "konfederasyon",
+      "konfederasyonu"
+    ]
+  },
+  "forbidden_phrases": {
+    "description": "DYS resmî yazışma formatında (mail dili) kullanılmaması gereken ifadeler",
+    "phrases": [
+      "iyi çalışmalar",
+      "iyi calısmalar",
+      "kolay gelsin",
+      "kolaylıklar dilerim",
+      "kolayliklar dilerim",
+      "teşekkürler",
+      "tesekkurler"
+    ]
+  },
+  "validation_notes": {
+    "genel_kurallar": [
+      "Alt makamlarla yazışmalar: 'Rica ederim.'",
+      "Üst ve aynı düzey makamlara yazışmalar: 'Arz ederim.'",
+      "Üst + aynı + alt makamlara birlikte dağıtım: 'Arz ve rica ederim.' veya 'Arz/rica ederim.'",
+      "Yetki devri (a.) varsa karar yetkiyi devreden makamın hiyerarşisine göre",
+      "Kamu niteliği olmayan tüzel kişiler: 'Rica ederim.'",
+      "Belirsiz durumlar: 'Arz ederim.' varsayılan"
+    ]
+  }
+}
